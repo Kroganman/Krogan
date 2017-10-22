@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
     char opr;
     float temp, kelvin, celsius, far;
-    if(argc==2)   /* Proverka na vvod shkali    */
+    if(argc==2) 
     {
         opr=0;
     }
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     {
       switch (opr)
       {
-        case 'K':  /* Shkala Kelvina */
+        case 'K': 
         case 'k':
           if(temp>0)
           {
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
           else
              printf("Not lower than absolute zero!");
           break;
-        case 'C': /* Shkala Celsiya */
+        case 'C': 
         case 'c':
           if(temp>-273)
           {
