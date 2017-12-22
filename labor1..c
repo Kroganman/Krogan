@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
     char opr;
     float temp, kelvin, celsius, far;
-    if(argc==2) 
+    if(argc==2) /* Scale check */
     {
         opr=0;
     }
@@ -14,11 +14,11 @@ int main(int argc, char *argv[])
             opr=*argv[2];
         }
     temp=atof(argv[1]);
-    if(argc<4)
+    if(argc<4) /* Checking for input arguments */
     {
       switch (opr)
       {
-        case 'K': 
+        case 'K':  /* Kelvin scale */
         case 'k':
           if(temp>0)
           {
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
           else
              printf("Not lower than absolute zero!");
           break;
-        case 'C': 
+        case 'C': /* Celsius scale */
         case 'c':
           if(temp>-273)
           {
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
           else
              printf("Not lower than absolute zero!");
           break;
-        case 'F': /* Shkala Farengeita */
+        case 'F': /* Fahrenheit scale */
         case 'f':
           if(temp>-459)
           {
@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
           else
              printf("Not lower than absolute zero!");
           break;
-        default: /* Shkala ne ykazana */
+        default: /* Temperature scale not indicated */
           kelvin=temp;
           if(kelvin>0)
           {
@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
              printf("C: %.2f\nF: %.2f\nK: %.2f\n\n",celsius, far, kelvin);
           }
           else
-             printf("Not lower than absolute zero!\n\n");
+             printf("Not lower than absolute zero!\n\n"); /* The temperature should be above absolute zero */
           far=temp;
           if(far>-459)
           {
